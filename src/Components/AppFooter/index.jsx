@@ -1,5 +1,4 @@
 import { Typography } from "antd";
-
 function AppFooter() {
   return (
     <div class="AppFooter">

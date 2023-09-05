@@ -4,6 +4,7 @@ import {
   ShopOutlined,
   ShoppingCartOutlined,
   UserOutlined,
+  DollarOutlined,
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 
@@ -18,9 +19,14 @@ function SlideMenu() {
         }}
         items={[
           {
+            label: "Pelayanan",
+            icon: <DollarOutlined />,
+            key: "/",
+          },
+          {
             label: "Dashboard",
             icon: <AppstoreOutlined />,
-            key: "/",
+            key: "/Dashboard",
           },
           {
             label: "Inventory",
