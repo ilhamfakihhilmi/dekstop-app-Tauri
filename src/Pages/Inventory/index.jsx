@@ -2,11 +2,13 @@ import { SelectOutlined } from "@ant-design/icons";
 import { Table, Typography, Space, Avatar, Rate } from "antd";
 import { useEffect, useState } from "react";
 import { getInventory } from "../../API";
+import DateTimePicker from 'react-datetime-picker';
 
-function Inventory() {
+function Laporan() {
   const [loading, setLoading] = useState(false);
   const [dataSource, setDataSource] = useState([]);
-
+  const [date, setDate] = useState();
+  // const [value, onChange] = useState < Value > (new Date());
   useEffect(() => {
     setLoading(true);
     getInventory().then((res) => {
@@ -15,8 +17,13 @@ function Inventory() {
   }, []);
   return (
     <Space size={20} direction="vertical">
-      <Typography.Title level={4}>Inventory</Typography.Title>
-      <Table
+      <Typography.Title level={4}>Laporan</Typography.Title>
+
+      <input type="date" onChange={e => setDate(e.target.value)}></input>
+
+      {/* <DateTimePicker onChange={onChange} value={value} /> */}
+
+      <Table class="tabel_laporan"
         columns={[
           {
             title: "Thumbnail",
@@ -59,4 +66,4 @@ function Inventory() {
     </Space>
   );
 }
-export default Inventory;
+export default Laporan;

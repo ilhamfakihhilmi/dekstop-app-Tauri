@@ -29,9 +29,9 @@ function SlideMenu() {
             key: "/Dashboard",
           },
           {
-            label: "Inventory",
+            label: "Laporan",
             icon: <ShopOutlined />,
-            key: "/inventory",
+            key: "/laporan",
           },
           {
             label: "Orders",
